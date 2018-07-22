@@ -28,44 +28,32 @@
         <div>
           <input type="text" name="Phone" placeholder="Ваш телефон" required="" class="phone">
         </div>
-        <button>Отправить <span class="arrow"> <svg width="213" height="71" viewBox="-0.709 -0.235 213 71" enable-background="new -0.709 -0.235 213 71" xml:space="preserve">
-<defs>
-</defs>
-<polygon points="0,26.488 0,44.144 167.747,44.144 167.747,70.631 211.89,35.316 167.747,0 167.747,26.488 "/>
-</svg>
-</span></button>
+        <button>Отправить <span class="arrow"> </span></button>
       </div>
       <div class="customform">
         <div class="popup-close"><span></span><span></span></div>
-        <h2>Растворитель углеводородный</h2>
+        <h2>Приблизительный расчет суммы доставки</h2>
         <div class="popup__cont">
-          <div class="popup__line">Цена за тонну ....................... от 35 000 руб.</div>
-          <div class="popup__line">Цена за литр ............................ от 24,50 руб.</div>
-          <div class="popup__line">Производитель ............ г.Нижневартовск</div>
-          <div class="popup__line">Базис отгрузки ....... г.Анжеро-Судженск</div>
+          <div class="questions__form">
+            <form action="#">
+              <div class="form__line">
+                <input type="text" id="name" name="name" placeholder="Имя">
+              </div>
+              <div class="form__line">
+                <input type="email" id="email" name="email" placeholder="Email">
+              </div>
+              <div class="form__line">
+                <textarea id="text" name="text" placeholder="Дополнительная информация" rows="4"></textarea>
+              </div>
+              <div class="form__line">
+                <p>Расчетная сумма - <span>***</span></p>
+              </div>
+              <div class="form__line">
+                <button type="submit" class="questions__btn">Заказать</button>
+              </div>
+            </form>
+          </div>
         </div>
-        <div class="global-button"><a href="#" class="custom-click global-form">Сделать заказ<span class="arrow"> <svg width="213" height="71" viewBox="-0.709 -0.235 213 71" enable-background="new -0.709 -0.235 213 71" xml:space="preserve">
-<defs>
-</defs>
-<polygon points="0,26.488 0,44.144 167.747,44.144 167.747,70.631 211.89,35.316 167.747,0 167.747,26.488 "/>
-</svg>
-</span></a></div>
-      </div>
-      <div class="popupsertificate popupsertificate1">
-        <div class="popup-close"><span></span><span></span></div>
-        <div class="popup__cont sertificate-wrap"><img src="img/sertificates/sertificate-1-full.jpg" alt="Сертификат"></div>
-      </div>
-      <div class="popupsertificate popupsertificate2">
-        <div class="popup-close"><span></span><span></span></div>
-        <div class="popup__cont sertificate-wrap"><img src="img/sertificates/sertificate-2-full.jpg" alt="Сертификат"></div>
-      </div>
-      <div class="popupsertificate popupsertificate3">
-        <div class="popup-close"><span></span><span></span></div>
-        <div class="popup__cont sertificate-wrap"><img src="img/sertificates/sertificate-3-full.jpg" alt="Сертификат"></div>
-      </div>
-      <div class="popupsertificate popupsertificate4">
-        <div class="popup-close"><span></span><span></span></div>
-        <div class="popup__cont sertificate-wrap"><img src="img/sertificates/sertificate-4-full.jpg" alt="Сертификат"></div>
       </div>
       <div class="politform">
         <div class="politform__wrap">
@@ -96,7 +84,9 @@
       <div style="background-image: url('img/header/header-bg.jpg'); background-repeat: no-repeat; background-position: center;" class="header-bg">
         <div class="header-overlay">
           <header data-wow-delay="0.3s" class="header wow fadeIn">
-            <div class="logo">ООО «ЮГ ТС»</div>
+            <div class="logo"> 
+              <div>ООО Транспортная компания <span>«ЮГ ТС»</span></div>
+            </div>
             <nav class="main-menu">
               <div class="menu-toggle">
                 <div class="one"></div>
@@ -117,10 +107,12 @@
                 <p> <a href="tel:+79111234567" class="num">+7 911 123 45 67</a></p>
               </div>
             </div>
+            <div class="null"></div>
           </header>
           <section data-wow-delay="0.5s" class="home wow fadeIn">
             <div class="wrap">
               <h1>Доставка грузов из Китая</h1>
+              <h3 class="subtitle">Собственные склады Китай,Москва,Краснодар,Анапа, Республика Крым.</h3>
               <h3 class="subtitle">От 1$ за килограмм</h3>
             </div>
           </section>
@@ -163,14 +155,14 @@
       </section>
       <section data-anchor="#calc" data-wow-delay="0.3s" class="calc wow fadeIn">
         <div class="half-side">
-          <div class="calc__title">Расстояние в км:</div>
+          <div class="calc__title calc__title--map">Расстояние в км:</div>
           <div id="map" class="map"></div>
         </div>
         <div class="half-side">
           <div class="tabs">
             <ul class="tabs__caption">
-              <li class="active">Краснодарский край и республика Крым</li>
-              <li>Китай</li>
+              <li class="calc__title active">Краснодарский край и республика Крым</li>
+              <li class="calc__title">Китай</li>
             </ul>
             <div class="tabs__content active"> 
               <form action="#">
@@ -188,42 +180,100 @@
                   <div class="form__name">Параметры груза</div>
                   <div class="form__name--line"> </div>
                 </div>
-                <div class="form__line">
+                <div class="form__line form__line--gabarits">
                   <input type="text" id="length1" name="length1" placeholder="Длина">
                   <input type="text" id="width" name="width1" placeholder="Ширина">
                   <input type="text" id="height1" name="height1" placeholder="Высота">
                 </div>
                 <div class="form__line">
-                  <button type="button" class="calculate">Рассчитать</button>
+                  <button type="button" class="calculate custom-form">Рассчитать</button>
                 </div>
               </form>
             </div>
-            <div class="tabs__content">Содержимое второго блока</div>
+            <div class="tabs__content">
+              <form action="#">
+                <div class="form__title">
+                  <div class="form__name">Направление</div>
+                  <div class="form__name--line"></div>
+                </div>
+                <div class="form__line">
+                  <input type="text" id="to1" name="to1" placeholder="Куда">
+                </div>
+                <div class="form__title">
+                  <div class="form__name">Параметры груза</div>
+                  <div class="form__name--line"> </div>
+                </div>
+                <div class="form__line form__line--gabarits">
+                  <input type="text" id="length1" name="length1" placeholder="Длина">
+                  <input type="text" id="width" name="width1" placeholder="Ширина">
+                  <input type="text" id="height1" name="height1" placeholder="Высота">
+                </div>
+                <div class="form__line">
+                  <button type="button" class="calculate custom-form">Рассчитать</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </section>
+      <div style="background-image: url('img/questions/questions-bg.jpg'); background-repeat: no-repeat; background-position: center;" class="questions-bg">
+        <div class="header-overlay">
+          <section data-anchor="#questions" data-wow-delay="0.3s" class="questions wow fadeIn">
+            <div class="wrap">
+              <div class="questions__title">Остались вопросы? Напишите нам!</div>
+              <div class="questions__form">
+                <form action="#">
+                  <div class="form__line">
+                    <input type="text" id="name" name="name" placeholder="Имя">
+                  </div>
+                  <div class="form__line">
+                    <input type="email" id="email" name="email" placeholder="Email">
+                  </div>
+                  <div class="form__line">
+                    <textarea id="text" name="text" placeholder="Текст" rows="4"></textarea>
+                  </div>
+                  <div class="form__line">
+                    <button type="submit" class="questions__btn">Написать</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
       <section data-anchor="#contacts" data-wow-delay="0.3s" class="contacts wow fadeIn">
         <div class="wrap">
-          <h2 class="about__title">Наши контакты</h2>
-        </div>
-      </section>
-      <section data-anchor="#questions" data-wow-delay="0.3s" class="questions wow fadeIn">
-        <div class="wrap">
-          <div class="questions__title">Остались вопросы? Напишите нам!</div>
-          <form action="#">
-            <div class="form__line">
-              <input type="text" id="name" name="name" placeholder="Имя">
+          <h2 class="contacts__title">Наши контакты</h2>
+          <div class="contacts__content">
+            <div class="half-side">
+              <div class="contacts__name">Краснодарский край и республика Крым</div>
+              <div class="contacts__group">
+                <p>123434 ул.Такая-то, дом 12, офис 3</p>
+                <p>123434 ул.Такая-то, дом 12, офис 3</p>
+              </div>
+              <div class="contacts__group">
+                <p>Отдел продаж: +7 921 123 12 12</p>
+                <p>Отдел логистики: +7 921 123 45 45</p>
+              </div>
+              <div class="contacts__group">
+                <p> </p><a href="mailto:info@transport.ru">Email: info@transport.ru</a>
+              </div>
             </div>
-            <div class="form__line">
-              <input type="email" id="email" name="email" placeholder="Email">
+            <div class="half-side">
+              <div class="contacts__name">Китай</div>
+              <div class="contacts__group">
+                <p>123434 ул.Такая-то, дом 12, офис 3</p>
+                <p>123434 ул.Такая-то, дом 12, офис 3</p>
+              </div>
+              <div class="contacts__group">
+                <p>Отдел продаж: +7 921 123 12 12</p>
+                <p>Отдел логистики: +7 921 123 45 45</p>
+              </div>
+              <div class="contacts__group">
+                <p><a href="mailto:info@transport.ru">Email: info@transport.ru</a></p>
+              </div>
             </div>
-            <div class="form__line">
-              <textarea id="text" name="text" placeholder="Текст"></textarea>
-            </div>
-            <div class="form__line">
-              <button type="submit" class="calculate"></button>
-            </div>
-          </form>
+          </div>
         </div>
       </section>
       <footer class="footer">
@@ -243,7 +293,7 @@
         </div>
         <div class="footer__bottom">
           <div class="wrap wow fadeIn">
-            <p>Copyright © <span id="copy"> </span><span>Lars</span></p><a href="#" class="polit-form">Политика конфиденциальности</a>
+            <p>Copyright © <span id="copy"> </span><span>Lars</span></p>
           </div>
         </div>
       </footer>
