@@ -112,53 +112,59 @@
           <section data-wow-delay="0.5s" class="home wow fadeIn">
             <div class="wrap">
               <h1>Доставка грузов из Китая</h1>
-              <h3 class="subtitle">Собственные склады Китай,Москва,Краснодар,Анапа, Республика Крым.</h3>
+              <h3 class="subtitle">Собственные склады Китай, Москва, Краснодар, Анапа, Республика Крым.</h3>
               <h3 class="subtitle">От 1$ за килограмм</h3>
             </div>
           </section>
         </div>
       </div>
-      <section data-anchor="#about" data-wow-delay="0.3s" class="about wow fadeIn">
-        <div class="wrap">
-          <h2 class="about__title">О компании</h2>
+      <div style="background-image: url('img/about/about-bg.jpg'); background-repeat: no-repeat; background-position: center;" class="about-bg">
+        <section data-anchor="#about" data-wow-delay="0.3s" class="about wow fadeIn">
+          <h2 class="about__title">
+            <div class="about__title--wrap">О компании</div>
+          </h2>
           <p class="about__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-        </div>
-      </section>
-      <section data-anchor="#services" data-wow-delay="0.3s" class="services wow fadeIn">
-        <div class="wrap">
-          <h2 class="services__title">Услуги</h2>
-          <div class="services__subtitle"> 
-            <p>Сбор и доставка грузов, Краснодарски край, Республики Крым,Китай.</p>
-            <p>Собственные склады,Москва, Республики Крым,Китай.</p>
+        </section>
+        <section data-anchor="#services" data-wow-delay="0.3s" class="services wow fadeIn">
+          <div class="wrap">
+            <h2 class="services__title">Услуги</h2>
+            <div class="services__subtitle"> 
+              <p>Сбор и доставка грузов, Краснодарски край, Республики Крым,Китай.</p>
+              <p>Собственные склады,Москва, Республики Крым,Китай.</p>
+            </div>
+            <ul class="services__items">
+              <li class="services__item">
+                <div class="services__name">Авто</div>
+                <div class="services__wrap">
+                  <div class="services__price">от 1$ за кг </div>
+                  <div class="services__period">(22-25 дней) </div>
+                  <div class="services__descr">в зависимости от веса и объема</div>
+                </div>
+              </li>
+              <li class="services__item">
+                <div class="services__name">Экспресс авто</div>
+                <div class="services__wrap">
+                  <div class="services__price">от 1,8$ за кг </div>
+                  <div class="services__period">(13-15 дней) </div>
+                  <div class="services__descr">в зависимости от веса и объема</div>
+                </div>
+              </li>
+              <li class="services__item">
+                <div class="services__name">Авиа</div>
+                <div class="services__wrap">
+                  <div class="services__price">от 3$ за кг </div>
+                  <div class="services__period">(8-12 дней) </div>
+                  <div class="services__descr">в зависимости от веса и объема</div>
+                </div>
+              </li>
+            </ul>
           </div>
-          <ul class="services__items">
-            <li class="services__item">
-              <div class="services__name">Авто</div>
-              <div class="services__price">от 1$ за кг </div>
-              <div class="services__period">(22-25 дней) </div>
-              <div class="services__descr">в зависимости от веса и объема</div>
-            </li>
-            <li class="services__item">
-              <div class="services__name">Экспресс авто</div>
-              <div class="services__price">от 1,8$ за кг </div>
-              <div class="services__period">(13-15 дней) </div>
-              <div class="services__descr">в зависимости от веса и объема</div>
-            </li>
-            <li class="services__item">
-              <div class="services__name">Авиа</div>
-              <div class="services__price">от 3$ за кг </div>
-              <div class="services__period">(8-12 дней) </div>
-              <div class="services__descr">в зависимости от веса и объема</div>
-            </li>
-          </ul>
-        </div>
-      </section>
+        </section>
+      </div>
       <section data-anchor="#calc" data-wow-delay="0.3s" class="calc wow fadeIn">
-        <div class="half-side">
-          <div class="calc__title calc__title--map">Расстояние в км:</div>
-          <div id="map" class="map"></div>
-        </div>
-        <div class="half-side">
+        <div class="calc__title calc__title--map">Расстояние в км:</div>
+        <div id="map" class="map"></div>
+        <div class="wrap">
           <div class="tabs">
             <ul class="tabs__caption">
               <li class="calc__title active">Краснодарский край и республика Крым</li>
@@ -278,21 +284,23 @@
       </section>
       <footer class="footer">
         <div class="footer__top wow fadeIn">
-          <div class="logo">Logistic</div>
-          <nav class="main-menu">
-            <div class="menu"> 
-              <ul class="menu-items">
-                <li data-menuAnchor="#about" class="active">О компании</li>
-                <li data-menuAnchor="#calc">Калькулятор</li>
-                <li data-menuAnchor="#contacts">Контакты</li>
-                <li data-menuAnchor="#questions">Обратная связь</li>
-                <li> <a href="tel:+79111234567" class="num">+7 911 123 45 67</a></li>
-              </ul>
-            </div>
-          </nav>
+          <div class="wrap">
+            <div class="logo">Logistic</div>
+            <nav class="main-menu">
+              <div class="menu"> 
+                <ul class="menu-items">
+                  <li data-menuAnchor="#about" class="active">О компании</li>
+                  <li data-menuAnchor="#calc">Калькулятор</li>
+                  <li data-menuAnchor="#contacts">Контакты</li>
+                  <li data-menuAnchor="#questions">Обратная связь</li>
+                  <li> <a href="tel:+79111234567" class="num">+7 911 123 45 67</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
         </div>
         <div class="footer__bottom">
-          <div class="wrap wow fadeIn">
+          <div class="wrap">
             <p>Copyright © <span id="copy"> </span><span>Lars</span></p>
           </div>
         </div>
