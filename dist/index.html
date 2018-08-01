@@ -29,17 +29,21 @@
               <input type="hidden" name="admin_email" value="liaforweb@gmail.com, artem@largespace.ru">
               <input type="hidden" name="form_subject" value="transport-вопрос">
               <div class="form__line">
-                <input type="text" id="name2" name="name2" alt="Имя" placeholder="Имя" required>
+                <input type="text" id="name2" name="name2[val]" alt="Имя" placeholder="Имя" required>
+                <input type="hidden" name="name2[alter]" value="Имя">
               </div>
               <div class="form__line">
-                <input type="email" id="email2" name="email2" alt="Email" placeholder="Email" required>
+                <input type="email" id="email2" name="email2[val]" alt="Email" placeholder="Email" required>
+                <input type="hidden" name="email2[alter]" value="Email">
               </div>
               <div class="form__line">
-                <textarea id="text2" name="text2" alt="Дополнительная информация" placeholder="Дополнительная информация" rows="4"></textarea>
+                <textarea id="text2" name="text2[val]" alt="Дополнительная информация" placeholder="Дополнительная информация" rows="4"></textarea>
+                <input type="hidden" name="text2[alter]" value="Дополнительная информация">
               </div>
               <div class="form__line">
                 <p>Расчетная сумма - 
-                  <input type="text" id="sum" name="sum" value="***" alt="Расчетная сумма" class="sum">
+                  <input type="text" id="sum" name="sum[val]" value="***" alt="Расчетная сумма" class="sum">
+                  <input type="hidden" name="sum[alter]" value="Расчетная сумма">
                 </p>
               </div>
               <div class="agree__line">

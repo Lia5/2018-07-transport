@@ -10,32 +10,32 @@ if ( $method === 'POST' ) {
 	$admin_email  = trim($_POST["admin_email"]);
 	$form_subject = trim($_POST["form_subject"]);
 
+	$pattern = '<tr %s><td style="padding: 10px; border: #e9e9e9 1px solid;"><b>%s</b></td><td style="padding: 10px; border: #e9e9e9 1px solid;">%s</td></tr>';
+
 	foreach ( $_POST as $key => $value ) {
-		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
-			$message .= "
-			" . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
-				<td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
-				<td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
-			</tr>
-			";
-		}
-	}
+    if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
+       if ( is_array($value) && isset($value['val']) && isset($value['alter']) ) {
+           $trStyle = ($c = !$c) ? '':' style="background-color: #f8f8f8;"';
+           $message .= vsprintf($pattern, [$trStyle, $value['alter'], $value['val']]);
+       }
+    }
+  }
 } else if ( $method === 'GET' ) {
 
 	$project_name = trim($_GET["project_name"]);
 	$admin_email  = trim($_GET["admin_email"]);
 	$form_subject = trim($_GET["form_subject"]);
 
-	foreach ( $_GET as $key => $value ) {
-		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
-			$message .= "
-			" . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
-				<td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
-				<td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
-			</tr>
-			";
-		}
-	}
+	$pattern = '<tr %s><td style="padding: 10px; border: #e9e9e9 1px solid;"><b>%s</b></td><td style="padding: 10px; border: #e9e9e9 1px solid;">%s</td></tr>';
+
+	foreach ( $_POST as $key => $value ) {
+    if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
+       if ( is_array($value) && isset($value['val']) && isset($value['alter']) ) {
+           $trStyle = ($c = !$c) ? '':' style="background-color: #f8f8f8;"';
+           $message .= vsprintf($pattern, [$trStyle, $value['alter'], $value['val']]);
+       }
+    }
+  }
 }
 
 $message = "<table style='width: 100%;'>$message</table>";
