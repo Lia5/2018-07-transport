@@ -208,13 +208,16 @@
                   <input type="hidden" name="admin_email" value="liaforweb@gmail.com, artem@largespace.ru">
                   <input type="hidden" name="form_subject" value="transport-вопрос">
                   <div class="form__line">
-                    <input type="text" id="name" name="name" alt="Имя" placeholder="Имя" required>
+                    <input type="text" id="name" name="name[val]" alt="Имя" placeholder="Имя" required>
+                    <input type="hidden" name="name[alter]" value="Имя">
                   </div>
                   <div class="form__line">
-                    <input type="email" id="email" name="email" alt="Email" placeholder="Email" required>
+                    <input type="email" id="email" name="email[val]" alt="Email" placeholder="Email" required>
+                    <input type="hidden" name="email[alter]" value="Email">
                   </div>
                   <div class="form__line">
-                    <textarea id="text" name="text" alt="Текст" placeholder="Текст" rows="4"></textarea>
+                    <textarea id="text" name="text[val]" alt="Дополнительная информация" placeholder="Дополнительная информация" rows="4"></textarea>
+                    <input type="hidden" name="text[alter]" value="Дополнительная информация">
                   </div>
                   <div class="agree__line">
                     <input type="checkbox" id="agree" checked="">
