@@ -28,7 +28,7 @@ if ( $method === 'POST' ) {
 
 	$pattern = '<tr %s><td style="padding: 10px; border: #e9e9e9 1px solid;"><b>%s</b></td><td style="padding: 10px; border: #e9e9e9 1px solid;">%s</td></tr>';
 
-	foreach ( $_POST as $key => $value ) {
+	foreach ( $_GET as $key => $value ) {
     if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
        if ( is_array($value) && isset($value['val']) && isset($value['alter']) ) {
            $trStyle = ($c = !$c) ? '':' style="background-color: #f8f8f8;"';
